@@ -1,0 +1,283 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* CSS STYLE STARTS HERE */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>; /* 100-900 */
+    font-style: normal; /* normal - italic */
+}
+
+:root {
+    --white: #FFFFF0;
+    --yel-white: #F5F5DC;
+    --orange: #CD7F32;
+    --brown: #5D3A1A;
+    --dark-gray: #333333;
+    --med-gray: #555;
+    --box-shadow: -0.5rem 0.5rem 1rem var(--med-gray);
+}
+h1{
+    font-size: 38px;
+    color: var(--brown );
+    font-weight: 600;
+    padding-bottom: 25px;
+}
+h2{
+    font-size: 22px;
+    padding: 20px;
+}
+body{
+    background-color: var(--yel-white);
+    width: 1280px;
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+    margin: 0 auto;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 40px;
+    align-items: center;
+}
+nav a{
+    text-decoration: none;
+    padding: 1rem;
+	text-align: center;
+	color: white;
+	background-color: var(--orange);
+	font-size: 1.25rem;
+	font-weight: 800;
+    border-radius: 30px;
+}
+section{
+    background-color: var(--white);
+    border-radius: 30px;
+    margin: 25px 0;
+    padding: 40px 35px;
+}
+.add-list{
+    display: grid;
+    justify-items: center;
+}
+.reminder{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+.list{
+    display: grid;
+    justify-items: center;
+    font-size: 18px;
+    font-weight: 200;
+}
+.hidden{
+    display: none;
+}
+
+.list-display{
+	margin: 0 auto;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+#reminderList li{
+	gap: 0.5rem;
+    margin: 15px;
+    font-weight: 200;
+}
+ol{
+	padding-left: 2rem;
+	list-style-type: decimal;
+}
+input[type="text"]{
+    color: #333; 
+    width: 100%; 
+    box-sizing: border-box; 
+    letter-spacing: 1px;
+    border: 0; 
+    padding: 7px 15px; 
+    border: 1px solid #ccc; 
+    position: relative; 
+    background: transparent;
+}
+:focus{
+    outline: none;
+}
+input{
+
+    margin: 1rem auto;
+    font-size: 16px;
+}
+#item{
+    padding: 5px 30px;
+}
+
+#addBtn, #clearBtn{
+    background: none;
+    text-align: center;
+    margin: 5px 15px;
+    padding: 10px 25px;
+    background-color: var(--orange);
+    color: white;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    font-weight: 800;
+}
+#accordion{
+    margin: 30px auto;
+    width: 1000px;
+    align-items: center;
+}
+.single-item p{
+    margin: 10px 300px;
+    text-align: center;
+    font-weight: 200;
+
+}
+.genre-desc{
+    margin: 10px 45px;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+}
+/* didnt work
+.slick-prev{
+    left: 465px;
+    top: 240px;
+}
+.slick-next{
+    right: 5px;
+    top: 240px;
+}
+.slick-next:before, .slick-prev:before{
+    font-size: 25px;
+}
+    */
+.slick-slide img{
+    margin: 30px auto;
+}
+.single-item h3{
+    font-weight: 600;
+    text-align: center;
+    font-size: 25px;
+}
+#popular{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 1rem;
+}
+div h5{
+	font-size: 1.35rem;
+	font-weight: bold;
+	margin: 1rem;
+}
+.movie p{
+    font-weight: 200;
+}
+.vote{
+	display: block;
+    width: 100%;
+	font-weight: bold;
+	color: var(--dark-gray);
+	margin: 1rem 0 0 0;
+}
+.movie img{
+    width: 300px;
+}
+.movie{
+	display: block;
+	max-width: 300px;
+	margin: 0 auto;
+}
+.movie h5{
+	margin-top: -2rem;
+}
+.movie button{
+    background-color: var(--brown);
+	width: 3rem;
+	height: 3rem;
+	display: block;
+	padding: 0.5rem;
+	position: relative;
+	top: -2.5rem;
+	left: 80%;
+	margin: 0;
+	transition: all 300ms;
+    outline: none;
+    border: none;
+    box-shadow: -6px 6px 10px var(--med-gray);
+}
+.movie button:focus{
+	outline: 4px solid var(--orange);
+	outline-offset: 2px;
+}
+
+.movie button:hover{
+	background-color: var(--white);
+}
+.movie button:hover .arrow{
+	background-color: var(--brown);
+}
+button.arrow span{
+	margin: 0 auto;
+}
+.arrow{
+	display: block;
+	width: 2rem;
+	height: 2rem;
+	background-color: white;
+	clip-path: polygon(10% 35%, 50% 55%, 90% 35%, 90% 50%, 50% 70%, 10% 50%);
+}

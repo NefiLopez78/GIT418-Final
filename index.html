@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+
+    <link href="jquery-ui-1.14.1.custom/jquery-ui.css" rel="stylesheet">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery-ui-1.14.1.custom/jquery-ui.js"></script>
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+
+    <script src="script.js" defer></script>
+
+
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#watchlist">Watchlist</a></li>
+                <li><a href="#recommend">Recommend</a></li>
+                <li><a href="#popular-movie">Movies</a></li>
+                <li><a href="#genres">Genres</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="watchlist">
+            <h1>Watchlist</h1>
+            <div class="reminder">
+                <div class="add-list">
+                    <h2>Type in any movies or shows below that you want to add to the list</h2>
+                    <form>
+                        <input type="text" name="item" id="item">
+			            <input type="button" name="addBtn" id="addBtn" value="Add">
+                        <input type="button" name="clearBtn" id="clearBtn" value="Clear">
+                    </form>
+                </div>
+                <div class="list-display">
+                    <strong class="hidden">Movie/show to watch later:</strong>
+		            <ol id="reminderList"></ol>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="recommend">
+            <h1>Recommendation</h1>
+            <div class="genre-desc">
+                <h2>These are a few movies and TV shows that I recommend watching. Each one offers something unique—whether it’s powerful storytelling, memorable characters, or a perspective that stays with you long after the credits roll.</h2>
+            </div>
+            <div class="single-item">
+                <div><img src="https://m.media-amazon.com/images/M/MV5BZjQwYzBlYzUtZjhhOS00ZDQ0LWE0NzAtYTk4MjgzZTNkZWEzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="The office show cover photo" width="300"><h3>The Office</h3><p>Reviewers say 'The Office' is acclaimed for its realistic office life portrayal and relatable characters, fostering a lasting sitcom appeal. Its mockumentary style enhances viewer connection, highlighting themes of workplace relationships and personal growth. Notable dynamics, like Jim and Pam's romance and Michael Scott's management, add charm. The series effectively blends humor with poignant moments, creating a deep audience connection through its unique mix of comedy and heart.</p></div>
+                <div><img src="https://m.media-amazon.com/images/M/MV5BZDliZDRhM2QtZDJjMi00NWQxLWFhOGItMTU1ZTA0NzM1NDY4XkEyXkFqcGc@._V1_.jpg" alt="godzilla minus one cover photo" width="300"><h3>Godzilla Minus One</h3><p>Feeling as if he unfairly cheated death too many times, Shikishima, a surviving Kamikaze pilot, is attacked on Odo Island along with many war plane engineers by a gargantuan monster. After the engineers die because of Shikishima failing to distract the monster, an overwhelming amount of guilt weighs on him, especially after a homeless woman and a baby move into his home when he returns. Shikishima, now on a personal mission, teams up with a large group of veterans to finally take down the monster known as Godzilla.</p></div>
+                <div><img src="https://static.wikia.nocookie.net/marvelcinematicuniverse/images/5/5c/Civil_War_Final_Poster.jpg/revision/latest/scale-to-width-down/1200?cb=20160310172110" alt="Captain America: civil war cover photo" width="300"><h3>Captain America: Civil War</h3><p>With many people fearing the actions of super heroes, the government decides to push for the Hero Registration Act, a law that limits a hero's actions. This results in a division in The Avengers. Iron Man stands with this Act, claiming that their actions must be kept in check otherwise cities will continue to be destroyed, but Captain America feels that saving the world is daring enough and that they cannot rely on the government to protect the world. This escalates into an all-out war between Team Iron Man (Iron Man, Black Panther, Vision, Black Widow, War Machine, and Spider-Man) and Team Captain America (Captain America, Bucky Barnes, Falcon, Scarlet Witch, Hawkeye, and Ant Man) while a new villain emerges.</p></div>
+                <div><img src="https://m.media-amazon.com/images/M/MV5BOTFiNzRiOWEtYTQwNy00NmRiLWE0ZWYtNTE0YjExZjFmZjkwXkEyXkFqcGc@._V1_.jpg" alt="A silent voice cover photo" width="300"><h3>A Silent Voice: The Movie</h3><p>Reviewers say 'A Silent Voice' is acclaimed for its emotional depth, addressing themes like bullying, redemption, and depression. The film is lauded for its powerful narrative, relatable characters, and Shoya's journey toward forgiveness. Beautiful animation, impactful music, and nuanced portrayals of emotions and relationships are highlighted. Some critics note pacing issues and underdeveloped side characters, yet most agree it is a poignant, thought-provoking film that deeply resonates with audiences.</p></div>
+                <div><img src="https://m.media-amazon.com/images/M/MV5BMjVlZGFjMDctNDIxOS00NjY5LWE1ZTEtMTAxZGE4Y2QxZjMxXkEyXkFqcGc@._V1_.jpg" alt="King Richard cover photo" width="300"><h3>King Richard</h3><p>Armed with a clear vision and a brazen 78-page plan, Richard Williams is determined to write his daughters, Venus and Serena, into history. Training on Compton, California's neglected tennis courts--rain or shine--the girls are shaped by their father's unyielding commitment and their mother's balanced perspective and keen intuition, defying the seemingly insurmountable odds and prevailing expectations laid before them. Based on the true story that will inspire the world, "King Richard" follows the uplifting journey of a family whose unwavering resolve and unconditional belief ultimately delivers two of the world's greatest sports legends.</p></div>
+                <div><img src="https://m.media-amazon.com/images/M/MV5BODAxNWYyOTgtN2YyMS00MzU1LWFkNzYtYmQyYmJjMGQ2ZGM0XkEyXkFqcGc@._V1_.jpg" alt="Last samurai standing cover photo" width="300"><h3>Last Samurai Standing</h3><p>In 1878, late at night, 292 highly skilled samurais gather at the Tenryuji Temple in Kyoto to participate in a dangerous battle royale. They are lured there by the offer 100 billion yen for the grand prize. Each of the participants are given a wooden tag. The one who makes it to Tokyo will win the prize. Shujiro Saga takes part in this dangerous game to save his sick wife and child.</p></div>
+            </div>
+
+        </section>
+
+        <section id="popular-movie">
+            <h1>Popular Movies</h1>
+            <div class="genre-desc">
+                <h2>These are the most popular movies right now — films that are trending across theaters and streaming services, drawing major attention for their standout performances, strong reviews, and high audience demand.</h2>
+            </div>
+            <div id="popular"></div>
+
+        </section>
+
+        <section id="genres">
+            <h1>Genres</h1>
+            <div class="genre-desc">
+                <h2>A movie genre is a category that groups films based on shared themes, storytelling styles, and emotional tones. Genres help audiences know what kind of experience to expect—whether it's the excitement of action, the tension of horror, the imagination of sci-fi, the humor of comedy, or the emotion of drama. While each genre has its own conventions, many films blend multiple genres to create unique and engaging stories.</h2>
+            </div>
+            <div id="accordion">
+                <h3>Action</h3>
+                    <div class="desc">
+                        <p>
+                        Action films are built around excitement, physical movement, and high-energy sequences such as fights, explosions, car chases, and intense battles. These movies are crafted to deliver adrenaline and visual spectacle, often featuring heroes overcoming impossible odds.
+                        </p>
+                        <br>
+                        <p>
+                            The action genre emerged strongly in the 1930s and 1940s with adventure serials and war films, but it exploded in popularity in the 1980s with stars like Sylvester Stallone, Arnold Schwarzenegger, and Bruce Willis. Modern action films often blend CGI with practical effects, creating large-scale blockbusters.
+                        </p>
+                    </div>
+                    <h3>Adventure</h3>
+                    <div class="desc">
+                        <p>
+                        Adventure movies focus on exploration, discovery, and epic journeys. They often take place in exotic environments—jungles, deserts, oceans, or ancient ruins—and follow characters on quests or missions.
+                        </p>
+                        <br>
+                        <p>
+                            One of the earliest film genres, adventure storytelling goes back to silent cinema with films like “The Thief of Bagdad” (1924). Later, franchises like Indiana Jones and Pirates of the Caribbean revived interest by combining adventure with fantasy and action.
+                        </p>
+                    </div>
+                    <h3>Comedy</h3>
+                    <div class="desc">
+                        <p>
+                        Comedy films are made to entertain and bring laughter through humor, exaggeration, witty dialogue, and social satire. They explore everyday life in a lighthearted way or use absurd scenarios to make audiences laugh.
+                        </p>
+                        <br>
+                        <p>
+                            Comedy is one of the oldest film genres, with roots in early silent-era slapstick featuring Charlie Chaplin and Buster Keaton. It evolved over time into many styles: romantic comedies, dark comedies, parodies, and more.
+                        </p>
+                    </div>
+                    <h3>Drama</h3>
+                    <div class="desc">
+                        <p>
+                        Drama films focus on emotional storytelling and realistic, human-driven narratives. They explore conflict, relationships, personal growth, and everyday struggles.
+                        </p>
+                        <br>
+                        <p>
+                            Drama has been central to filmmaking since the beginning, inspired by theatrical traditions. Classic Hollywood dramas in the 1930s–1950s helped define character-driven storytelling, while modern dramas often tackle social issues or psychological themes.
+                        </p>
+                    </div>
+                    <h3>Horror</h3>
+                    <div class="desc">
+                        <p>
+                        Horror movies aim to scare, shock, or unsettle audiences through suspense, dark visuals, supernatural elements, or psychological tension. They tap into primal fears and uncomfortable emotions.
+                        </p>
+                        <br>
+                        <p>
+                            Horror originated from early Gothic literature and silent films like Nosferatu (1922). The genre has evolved through major eras—classic monster movies in the 1930s, psychological horror in the 60s and 70s, slashers in the 80s, and modern elevated horror with deeper themes.
+                        </p>
+                    </div>
+                    <h3>Thriller</h3>
+                    <div class="desc">
+                        <p>
+                        Thrillers are suspense-driven films built around tension, uncertainty, and high stakes. They often involve crime, mystery, espionage, or psychological mind games, keeping the audience on edge.
+                        </p>
+                        <br>
+                        <p>
+                            The thriller genre was shaped heavily by director Alfred Hitchcock, whose films in the mid-20th century set the standard for suspense. Over time, thrillers expanded into subgenres like psychological thrillers, crime thrillers, and political thrillers.
+                        </p>
+                    </div>
+                    <h3>Romance</h3>
+                    <div class="desc">
+                        <p>
+                        Romance films center on love, emotional connection, and the journey of relationships. They explore themes like attraction, heartbreak, sacrifice, and personal growth through love.
+                        </p>
+                        <br>
+                        <p>
+                            Romance has been a core movie genre since early cinema, with classic Hollywood films shaping the “love story” formula. Modern romance includes romantic comedies, tragic romances, and contemporary love stories that reflect social changes.
+                        </p>
+                    </div>
+                    <h3>Sci-Fi</h3>
+                    <div class="desc">
+                        <p>
+                        Sci-fi movies explore futuristic concepts, advanced technology, space travel, parallel universes, and scientific possibilities. They often ask philosophical questions about humanity, society, and the unknown.
+                        </p>
+                        <br>
+                        <p>
+                            Early sci-fi films like Metropolis (1927) imagined futuristic worlds long before they existed. The genre boomed during the space race of the 1950s–60s and transformed again in the late 20th century with Star Wars, Blade Runner, and The Matrix.
+                        </p>
+                    </div>
+                    <h3>Fantasy</h3>
+                    <div class="desc">
+                        <p>
+                        Fantasy films involve magical elements, mythical creatures, alternate worlds, and supernatural powers. They break from reality and often revolve around heroic quests or epic battles between good and evil.
+                        </p>
+                        <br>
+                        <p>
+                            Fantasy traces back to early cinema trick films, such as Georges Méliès’ A Trip to the Moon (1902). The genre surged with modern adaptations like The Lord of the Rings and Harry Potter, which combined storytelling with advanced visual effects.
+                        </p>
+                    </div>
+                    <h3>Animation</h3>
+                    <div class="desc">
+                        <p>
+                        Animation uses illustrated or computer-generated imagery to tell stories that can span any genre—from adventure to drama. Its visual freedom allows for imaginative worlds and expressive characters.
+                        </p>
+                        <br>
+                        <p>
+                            Early animation began with hand-drawn frames in the early 1900s, evolving through Walt Disney’s innovations in the 1930s. The 1990s brought a major shift with CGI films like Toy Story, and animation continues to expand globally with styles like anime and stop-motion.
+                        </p>
+                    </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+</body>
+</html>
